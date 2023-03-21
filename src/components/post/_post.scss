@@ -1,0 +1,112 @@
+.Post{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    h1{
+        font-family: $logoFont;
+    }
+    .iconUpdate{
+        .icon{
+            cursor: pointer;
+            margin: 3px;
+        }
+    }
+    .PostTags{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 30px;
+        margin: 10px 0;
+        justify-content: center;
+        gap: 50px;
+        &_tag{
+            display: flex;
+            width: 100px;
+            height: 100%;
+            background-color: $contrastColor;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+    .PostInfos{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0;
+        span{
+            font-size: 16px;
+        }
+        hr{
+            height: 22px;
+            width: 1px;
+            border: 1px solid $mainColor;
+        }
+        span:nth-child(3){
+            color: $contrastColor;
+            font-size: 16px;
+        }
+    }
+    .PostImg{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .PostDesc{
+        line-height: 25px;
+        text-align: center;
+        margin: 20px 0;
+        
+    }
+    a{
+        text-decoration: none;
+    }
+    .bouton{
+        min-width: 10vw;
+        height: 5vh;
+        background-color: $contrastColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5vh;
+        padding: 1vh;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover{
+            background-color: darken($contrastColor, 10);
+        }
+        &:focus{
+            background-color: darken($contrastColor, 30);
+        }
+    }
+}
+.titleUpdate{
+    width: 100%;
+    height: 4vh;
+    font-size: 18px;
+    border: 1px solid $mainColor;
+    padding: 4px;
+    &:focus{
+        outline: 2px solid $contrastColor;
+        border: none;
+    }
+}
+.descUpdate{
+    width: 100%;
+    margin-top: 2vh;
+    border: 1px solid $mainColor;
+    padding: 4px;
+    &:focus{
+        outline: 2px solid $contrastColor;
+        border: none;
+    }
+}

@@ -1,0 +1,42 @@
+.listePosts{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    position: absolute;
+    top: 28%;
+    left: 15vw;
+    span{
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    .postsContainer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 2vw;
+        grid-row-gap: 2vw;
+        &_empty{
+            margin-top: 50px;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+    .listePosts{
+        .postsContainer{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .listePosts{
+        position: static;
+        margin: 4vh auto;
+        .postsContainer{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

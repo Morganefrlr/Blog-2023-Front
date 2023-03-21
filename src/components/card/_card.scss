@@ -1,0 +1,97 @@
+.Card{
+    width: 100%;
+    height: 573px;
+    display: flex;
+    flex-direction: column;
+
+    &_imgTag{
+       width: 100%;
+       height: 60%;
+       position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .containerCardTags{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            top: 20px;
+            width: 20%;
+            height: 30%;
+            .cardTag{
+                height: 30%;
+                background-color: $contrastColor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span{
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &_infos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 40%;
+
+        h1{
+            font-family: $logoFont;
+            font-size: 20px;
+            text-align: center;
+        }
+        .timeName{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 15px;
+            align-items: center;
+            span{
+                font-size: 14px;
+                text-align: center;
+                margin: 0;
+            }
+            hr{
+                height: 100%;
+                border: 1px solid $mainColor;
+            }
+            span:nth-child(3){
+                color: $contrastColor;
+            }
+        }
+        .cardDesc{
+            text-align: center;
+            width: 90%;
+            font-style: italic;
+            font-size: 14px;
+            line-height: 18px;
+            margin-top: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        .card-btn{
+            @include bouton;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            margin-top: 10px;
+        }
+    }
+}
+.Adapt{
+    width: 100%;
+}

@@ -1,0 +1,74 @@
+
+$mainColor : #d7dcc3;
+$textColor: #282925;
+$contrastColor: #DFAB47;
+
+$logoFont: 'Galada', cursive;
+$mainFont: 'Roboto', sans-serif;
+
+@mixin bouton {
+    width: 20%;
+    height: 3vh;
+    background-color: $contrastColor;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover{
+        background-color: darken($contrastColor, 10);
+    }
+    &:focus{
+        background-color: darken($contrastColor, 30);
+    }
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $mainFont; 
+    color: $textColor;
+}
+
+.mainContainer{
+    width: 70vw;
+    margin: 20px auto;
+    display: flex;
+    &_left{
+        flex: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &_right{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .mainContainer{
+        width: 90vw;
+        &_right{
+            display: none
+        }
+    }
+}
+
+
+@import '../components/navbar/navbar';
+@import '../components/card/card';
+@import './home.scss';
+@import '../components/formConnexion/formconnexion';
+@import './connexion';
+@import '../components/rightbar/rightbar';
+@import './contact';
+@import './write';
+@import '../components/post/post';
+@import './about';
+@import '../components/updateprofil/updateprofil';

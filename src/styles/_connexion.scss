@@ -1,0 +1,19 @@
+.btnConnect{
+    position: absolute;
+    top: 8vh;
+    left: 75vw;
+    @include bouton;
+    width: 15vw;
+    height: 4vh;
+}
+@media screen and (max-width: 1024px){
+    .btnConnect{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 768px){
+    .btnConnect{
+        width: 30vw;
+        left: 35vw;
+    }
+}
