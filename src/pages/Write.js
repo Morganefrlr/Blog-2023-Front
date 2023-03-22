@@ -50,7 +50,7 @@ const Write = () => {
       }
       try {
         const res = await makeRequest.post("/post/", newPost);
-        window.location =`https://blog2023-justwrite.netlify.app/read/${res.data.post._id}`
+        window.location =`https://blog2023-justwrite.netlify.app`
       } catch (err) {
           setErrInputsWrite(err)
       }
