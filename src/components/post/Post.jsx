@@ -21,7 +21,7 @@ const Post = ({post, currentUser, writer}) => {
        
         try {
             await makeRequest.put("/post/" + post._id, {title, desc})
-            window.location = `https://blog2023-justwrite.netlify.app/read/${post._id}`
+            window.location ="https://blog2023-justwrite.netlify.app/"
         }
         catch(errUpdate){
             setErrUpdate(errUpdate)
